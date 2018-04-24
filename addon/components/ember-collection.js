@@ -163,6 +163,7 @@ export default Component.extend({
       }
       if (cell) {
         style = this._cellLayout.formatItemStyle(itemIndex, this._clientWidth, this._clientHeight);
+        style = `${style}z-index:${count - itemIndex};`;
         set(cell, 'style', style);
         set(cell, 'hidden', false);
         set(cell, 'key', itemKey);
@@ -181,6 +182,7 @@ export default Component.extend({
           let item = items.objectAt(itemIndex);
           itemKey = identity(item);
           style = this._cellLayout.formatItemStyle(itemIndex, this._clientWidth, this._clientHeight);
+          style = `${style}z-index:${this._cells.length - itemIndex};`;
           set(cell, 'style', style);
           set(cell, 'key', itemKey);
           set(cell, 'index', itemIndex);
@@ -199,6 +201,7 @@ export default Component.extend({
       let item = items.objectAt(itemIndex);
       itemKey = identity(item);
       style = this._cellLayout.formatItemStyle(itemIndex, this._clientWidth, this._clientHeight);
+      style = `${style}z-index:${this._cells.length - itemIndex};`;
       cell = new Cell(itemKey, item, itemIndex, style);
       cellMap[itemKey] = cell;
       this._cells.pushObject(cell);
