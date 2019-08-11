@@ -1,6 +1,6 @@
 {
   "name": "ember-collection",
-  "version": "1.0.0-alpha.8",
+  "version": "1.0.0-alpha.9",
   "description": "An efficient incremental rendering component with custom layouts and support for large lists.",
   "directories": {
     "doc": "doc",
@@ -49,7 +49,7 @@
   "dependencies": {
     "ember-cli-babel": "^6.8.2",
     "ember-cli-htmlbars": "^2.0.1",
-    "layout-bin-packer": "^1.2.0"
+    "layout-bin-packer": "^1.4.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
